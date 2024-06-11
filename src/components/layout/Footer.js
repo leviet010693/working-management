@@ -10,60 +10,60 @@
   * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { Layout, Row, Col } from "antd";
-import { HeartFilled } from "@ant-design/icons";
+import { Layout, Row, Col, Typography } from 'antd';
+import { HeartFilled } from '@ant-design/icons';
+
+const { Text } = Typography;
 
 function Footer() {
   const { Footer: AntFooter } = Layout;
 
   return (
-    <AntFooter style={{ background: "#fafafa" }}>
-      <Row className="just">
+    <AntFooter style={{ background: '#fafafa' }}>
+      <Row className='just'>
         <Col xs={24} md={12} lg={12}>
-          <div className="copyright">
+          <div className='copyright'>
             © 2021, made with
             {<HeartFilled />} by
-            <a href="#pablo" className="font-weight-bold" target="_blank">
-              Creative Tim
-            </a>
+            <Text style={{ fontWeight: 'bold' }}> Ù cặc lỏ </Text>
             for a better web.
           </div>
         </Col>
         <Col xs={24} md={12} lg={12}>
-          <div className="footer-menu">
+          <div className='footer-menu'>
             <ul>
-              <li className="nav-item">
+              <li className='nav-item'>
                 <a
-                  href="#pablo"
-                  className="nav-link text-muted"
-                  target="_blank"
+                  href='#pablo'
+                  className='nav-link text-muted'
+                  target='_blank'
                 >
                   Creative Tim
                 </a>
               </li>
-              <li className="nav-item">
+              <li className='nav-item'>
                 <a
-                  href="#pablo"
-                  className="nav-link text-muted"
-                  target="_blank"
+                  href='#pablo'
+                  className='nav-link text-muted'
+                  target='_blank'
                 >
                   About Us
                 </a>
               </li>
-              <li className="nav-item">
+              <li className='nav-item'>
                 <a
-                  href="#pablo"
-                  className="nav-link text-muted"
-                  target="_blank"
+                  href='#pablo'
+                  className='nav-link text-muted'
+                  target='_blank'
                 >
                   Blog
                 </a>
               </li>
-              <li className="nav-item">
+              <li className='nav-item'>
                 <a
-                  href="#pablo"
-                  className="nav-link pe-0 text-muted"
-                  target="_blank"
+                  href='#pablo'
+                  className='nav-link pe-0 text-muted'
+                  target='_blank'
                 >
                   License
                 </a>
