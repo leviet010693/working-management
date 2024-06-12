@@ -17,6 +17,8 @@ import Sidenav from './Sidenav';
 import Header from './Header';
 import Footer from './Footer';
 
+import logo from 'assets/images/logo.png';
+
 const { Header: AntHeader, Content, Sider } = Layout;
 
 function Main({ children }) {
@@ -92,6 +94,10 @@ function Main({ children }) {
         }`}
         style={{ background: sidenavType }}
       >
+        <div className='brand'>
+          <img src={logo} alt='' />
+          <span>Muse Dashboard</span>
+        </div>
         <Sidenav color={sidenavColor} />
       </Sider>
       <Layout>
