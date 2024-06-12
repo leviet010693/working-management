@@ -249,30 +249,12 @@ const setting = [
   </svg>,
 ];
 
-function Header({
-  placement,
-  name,
-  subName,
-  onPress,
-  handleSidenavColor,
-  handleSidenavType,
-  handleFixedNavbar,
-}) {
-  const { Title, Text } = Typography;
-
-  const [visible, setVisible] = useState(false);
-  const [sidenavType, setSidenavType] = useState('transparent');
-
+function Header({ name, subName }) {
   useEffect(() => window.scrollTo(0, 0));
-
-  const showDrawer = () => setVisible(true);
-  const hideDrawer = () => setVisible(false);
 
   return (
     <>
-      <div className='setting-drwer' onClick={showDrawer}>
-        {setting}
-      </div>
+      <div className='setting-drwer'>{setting}</div>
       <Row gutter={[24, 0]}>
         <Col span={24} md={6}>
           <Breadcrumb>
@@ -291,34 +273,6 @@ function Header({
               {subName.replace('/', '')}
             </span>
           </div>
-        </Col>
-        <Col span={24} md={18} className='header-control'>
-          {/* <a
-            href='#pablo'
-            className='ant-dropdown-link'
-            onClick={(e) => e.preventDefault()}
-          >
-            {bell}
-          </a>
-          <Button type='link' onClick={showDrawer}>
-            {logsetting}
-          </Button>
-          <Button
-            type='link'
-            className='sidebar-toggler'
-            onClick={() => onPress()}
-          >
-            {toggler}
-          </Button> */}
-          {/* <Link to='/sign-in' className='btn-sign-in'>
-            {profile}
-            <span>Sign in</span>
-          </Link> */}
-          {/* <Input
-            className='header-search'
-            placeholder='Type here...'
-            prefix={<SearchOutlined />}
-          /> */}
         </Col>
       </Row>
     </>
